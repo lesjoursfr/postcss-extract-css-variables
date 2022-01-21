@@ -1,0 +1,10 @@
+.lj-color-35 .selector-1 { background-color: #fda92a; }
+.lj-color-35 .selector-1:before { background-color: #fdde2a; }
+html .underlined-links .a,html .underlined-links a { text-shadow: .03em 0 #ddd,-.03em 0 #ddd,0 .03em #ddd,0 -.03em #ddd,.06em 0 #ddd,-.06em 0 #ddd,.09em 0 #ddd,-.09em 0 #ddd,.12em 0 #ddd,-.12em 0 #ddd,.15em 0 #ddd,-.15em 0 #ddd; }
+html.lj-dark-theme .underlined-links .a,html.lj-dark-theme .underlined-links a { text-shadow: .03em 0 #173663,-.03em 0 #173663,0 .03em #173663,0 -.03em #173663,.06em 0 #173663,-.06em 0 #173663,.09em 0 #173663,-.09em 0 #173663,.12em 0 #173663,-.12em 0 #173663,.15em 0 #173663,-.15em 0 #173663; }
+.lj-color-35 #master .master-intro a.lj-color-text,.lj-color-35 .underlined-links a.lj-color-text { background-image: -webkit-gradient(linear,left top,left bottom,from(#fda92a),to(#fda92a)); }
+.lj-color-35 #master .master-intro a.lj-color-text,.lj-color-35 .underlined-links a.lj-color-text { background-image: -o-linear-gradient(#fda92a,#fda92a); }
+.lj-color-35 #master .master-intro a.lj-color-text,.lj-color-35 .underlined-links a.lj-color-text { background-image: linear-gradient(#fda92a,#fda92a); }
+.lj-color-35 #master .master-intro a.lj-color-text,.lj-color-35 .underlined-links a.lj-color-text { color: #fda92a; }
+.lj-color-35 .lj-color-border { border-color: #fda92a; }
+.lj-color-35 .lj-color-text { color: #fda92a; }

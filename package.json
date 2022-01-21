@@ -1,0 +1,59 @@
+{
+  "name": "@lesjoursfr/postcss-extract-css-variables",
+  "version": "1.0.0",
+  "description": "PostCSS plugin to extract rules with CSS variables",
+  "license": "MIT",
+  "repository": "lesjoursfr/postcss-extract-css-variables",
+  "homepage": "https://github.com/lesjoursfr/postcss-extract-css-variables#readme",
+  "bugs": {
+    "url": "https://github.com/lesjoursfr/postcss-extract-css-variables/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "postcss-extract-css-variables"
+  ],
+  "scripts": {
+    "test": "jest --coverage && eslint ."
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.4.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-plugin-jest": "^25.7.0",
+    "jest": "^27.4.7",
+    "postcss": "^8.4.5"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:jest/recommended"
+    ],
+    "rules": {
+      "jest/expect-expect": "off"
+    }
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 100
+      }
+    }
+  },
+  "packageManager": "yarn@3.1.1"
+}

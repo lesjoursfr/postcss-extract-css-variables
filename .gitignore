@@ -1,0 +1,26 @@
+# Yarn & node.js dependencies
+node_modules/
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# OS X
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+.~lock.*
+
+# Logs files
+npm-debug.log
+yarn-error.log
+
+# Jest coverage
+coverage/
+
+# Test files
+test/output.css
