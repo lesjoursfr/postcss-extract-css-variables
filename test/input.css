@@ -1,3 +1,6 @@
+@charset "UTF-8";
+
+/* Some comment */
 html {
     --color-main: #414141;
     --color-dark: #333;
@@ -5,6 +8,7 @@ html {
     --color-grey-stripe: rgba(0,0,0,.1);
 }
 
+/* An other comment */
 html.lj-dark-theme {
     --color-main: #a4c0ea;
     --color-dark: #b9ceef;

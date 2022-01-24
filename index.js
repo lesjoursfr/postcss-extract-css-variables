@@ -41,6 +41,13 @@ module.exports = (opts = {}) => {
 
       // Look for CSS variable declaration
       for (const rule of root.nodes) {
+        // Check the type of node
+        if (rule.type === 'atrule' || rule.type === 'comment') {
+          // Skip this rule
+          continue;
+        }
+
+        // Check nodes
         for (const declaration of rule.nodes) {
           if (CSS_VARIABLE_DECLARATION.test(declaration.prop)) {
             // Add the CSS variable
@@ -54,6 +61,13 @@ module.exports = (opts = {}) => {
 
       // Look for CSS variable use
       for (const rule of root.nodes) {
+        // Check the type of node
+        if (rule.type === 'atrule' || rule.type === 'comment') {
+          // Skip this rule
+          continue;
+        }
+
+        // Check nodes
         for (const declaration of rule.nodes) {
           if (CSS_VARIABLE_USE.test(declaration.value)) {
             for (const cssVariable of cssVariablesHolder) {
