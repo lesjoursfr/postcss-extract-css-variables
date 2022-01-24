@@ -1,5 +1,7 @@
-# postcss-extract-css-variables
+[![npm version](https://badge.fury.io/js/@lesjoursfr%2Fpostcss-extract-css-variables.svg)](https://badge.fury.io/js/@lesjoursfr%2Fpostcss-extract-css-variables)
 
+postcss-extract-css-variables
+================
 [PostCSS] plugin to extract rules with CSS variables.
 
 [PostCSS]: https://github.com/postcss/postcss
