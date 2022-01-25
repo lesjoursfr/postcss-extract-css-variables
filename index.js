@@ -2,6 +2,7 @@ const os = require('os');
 const fs = require('fs');
 const CSS_VARIABLE_DECLARATION = /^--/;
 const CSS_VARIABLE_USE = /(var\([a-zA-Z0-9-]+\))/;
+const HTML_NODE = /^html([#.:[][#.:_[\]\-a-zA-Z0-9]+)?(?:\s|$)/;
 
 class CSSVariable {
   constructor(name, selector, value) {
@@ -14,11 +15,31 @@ class CSSVariable {
     return value.includes(`var(${this.name})`);
   }
 
-  wrapAndReplace(selector, prop, value) {
-    let newSelector = selector.split(',').map((el) => `${this.selector} ${el.trim()}`).join(',');
-    let newValue = value.replaceAll(`var(${this.name})`, this.value);
+  wrapAndReplace(selector, prop, value, important) {
+    // Get new selector & value
+    const newSelector = this._mixSelectors(this.selector, selector.split(',')).join(',');
+    const newValue = value.replaceAll(`var(${this.name})`, this.value);
 
-    return `${newSelector} { ${prop}: ${newValue}; }`;
+    // Return the rule
+    return (important === true)
+      ? `${newSelector} { ${prop}: ${newValue}!important; }`
+      : `${newSelector} { ${prop}: ${newValue}; }`;
+  }
+
+  _mixSelectors(varSelector, ruleSelectors) {
+    return ruleSelectors.map((ruleSelector) => {
+      if (HTML_NODE.test(ruleSelector)) {
+        const varHtmlMatch = HTML_NODE.exec(varSelector);
+        const ruleHtmlMatch = HTML_NODE.exec(ruleSelector);
+        if (varHtmlMatch !== null) {
+          return `html${varHtmlMatch[1] || ''}${ruleHtmlMatch[1] || ''} ${ruleSelector.replace(HTML_NODE, '').trim()}`;
+        } else {
+          return ruleSelector.replace(`html${ruleHtmlMatch[1] || ''}`, `html${ruleHtmlMatch[1] || ''} ${varSelector}`);
+        }
+      } else {
+        return `${varSelector} ${ruleSelector.trim()}`;
+      }
+    });
   }
 }
 
@@ -72,7 +93,14 @@ module.exports = (opts = {}) => {
           if (CSS_VARIABLE_USE.test(declaration.value)) {
             for (const cssVariable of cssVariablesHolder) {
               if (cssVariable.isUsed(declaration.value)) {
-                generatedRules.push(cssVariable.wrapAndReplace(rule.selector, declaration.prop, declaration.value));
+                generatedRules.push(
+                  cssVariable.wrapAndReplace(
+                    rule.selector,
+                    declaration.prop,
+                    declaration.value,
+                    declaration.important
+                  )
+                );
               }
             }
           }

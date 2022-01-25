@@ -2,25 +2,25 @@
 
 /* Some comment */
 html {
-    --color-main: #414141;
-    --color-dark: #333;
-    --color-light: #ddd;
-    --color-grey-stripe: rgba(0,0,0,.1);
+  --color-main: #414141;
+  --color-dark: #333;
+  --color-light: #ddd;
+  --color-grey-stripe: rgba(0,0,0,.1);
 }
 
 /* An other comment */
 html.lj-dark-theme {
-    --color-main: #a4c0ea;
-    --color-dark: #b9ceef;
-    --color-light: #173663;
-    --color-grey-stripe: hsla(0,0%,100%,.1);
+  --color-main: #a4c0ea;
+  --color-dark: #b9ceef;
+  --color-light: #173663;
+  --color-grey-stripe: hsla(0,0%,100%,.1);
 }
 
 .lj-color-35 {
   --lj-color-main: #fda92a;
   --lj-color-alpha: rgba(253,169,42,.75);
   --lj-color-light: #fdde2a;
-  --lj-color-mixed: #fdc42a
+  --lj-color-mixed: #fdc42a;
 }
 
 .dummy {
@@ -29,20 +29,27 @@ html.lj-dark-theme {
 
 .dummy:after,.dummy:before {
   content: " ";
-  display: table
+  display: table;
 }
 
 .dummy:after {
-  clear: both
+  clear: both;
+}
+
+html {
+  background: var(--color-light);
+	font-weight: 600;
+	font-size: 16px;
+	color: var(--lj-color-main);
 }
 
 .selector-1 {
-    background-color: var(--lj-color-main);
-    content: "";
-    display: inline-block;
-    height: 5px;
-    margin-right: 10px;
-    width: 18px
+  background-color: var(--lj-color-main);
+  content: "";
+  display: inline-block;
+  height: 5px;
+  margin-right: 10px;
+  width: 18px;
 }
 
 .selector-1:before {
@@ -51,43 +58,45 @@ html.lj-dark-theme {
   display: inline-block;
   height: 5px;
   margin-right: 10px;
-  width: 18px
+  width: 18px;
+}
+
+html.selector-2 {
+  background: var(--color-light);
+	font-weight: 600;
+	font-size: 16px;
+	color: var(--lj-color-main);
+}
+
+html .selector-3 {
+  background: var(--color-light);
+	font-weight: 600;
+	font-size: 16px;
+	color: var(--lj-color-main);
 }
 
 .underlined-links .a,.underlined-links a {
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#c83e2c),to(#c83e2c));
-    background-image: -o-linear-gradient(#c83e2c,#c83e2c);
-    background-image: linear-gradient(#c83e2c,#c83e2c);
-    background-position: 0 1.06em;
-    background-repeat: repeat-x;
-    background-size: 1px 1px;
-    cursor: pointer;
-    text-shadow: .03em 0 var(--color-light),-.03em 0 var(--color-light),0 .03em var(--color-light),0 -.03em var(--color-light),.06em 0 var(--color-light),-.06em 0 var(--color-light),.09em 0 var(--color-light),-.09em 0 var(--color-light),.12em 0 var(--color-light),-.12em 0 var(--color-light),.15em 0 var(--color-light),-.15em 0 var(--color-light)
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#c83e2c),to(#c83e2c));
+  background-image: -o-linear-gradient(#c83e2c,#c83e2c);
+  background-image: linear-gradient(#c83e2c,#c83e2c);
+  background-position: 0 1.06em;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  cursor: pointer;
+  text-shadow: .03em 0 var(--color-light),-.03em 0 var(--color-light),0 .03em var(--color-light),0 -.03em var(--color-light),.06em 0 var(--color-light),-.06em 0 var(--color-light),.09em 0 var(--color-light),-.09em 0 var(--color-light),.12em 0 var(--color-light),-.12em 0 var(--color-light),.15em 0 var(--color-light),-.15em 0 var(--color-light);
 }
 
-#master .master-intro a.lj-color-text,.underlined-links a.lj-color-text {
-    background-image: -webkit-gradient(linear,left top,left bottom,from(var(--lj-color-main)),to(var(--lj-color-main)));
-    background-image: -o-linear-gradient(var(--lj-color-main),var(--lj-color-main));
-    background-image: linear-gradient(var(--lj-color-main),var(--lj-color-main));
-    color: var(--lj-color-main)
+.master-intro a.lj-color-text,.underlined-links a.lj-color-text {
+  background-image: -webkit-gradient(linear,left top,left bottom,from(var(--lj-color-main)),to(var(--lj-color-main)));
+  background-image: -o-linear-gradient(var(--lj-color-main),var(--lj-color-main));
+  background-image: linear-gradient(var(--lj-color-main),var(--lj-color-main));
+  color: var(--lj-color-main);
 }
 
 .lj-color-border {
-    border-color: var(--lj-color-main)!important
+  border-color: var(--lj-color-main)!important;
 }
 
 .lj-color-text {
-    color: var(--lj-color-main)
-}
-
-@media (max-width: 588px) {
-  .lj-color-text {
-    color: var(--color-dark)
-  }
-}
-
-@media (min-width: 589px) and (max-width:960px) {
-  .lj-color-text {
-    color: var(--color-light)
-  }
+  color: var(--lj-color-main);
 }
