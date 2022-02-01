@@ -21,7 +21,7 @@
     "test": "jest --coverage && eslint ."
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=v16.13.2"
   },
   "peerDependencies": {
     "postcss": "^8.4.5"
