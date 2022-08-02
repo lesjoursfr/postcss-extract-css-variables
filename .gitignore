@@ -1,3 +1,10 @@
+# Tests files
+test/output.css
+coverage/
+
+# Yarn lockfile
+yarn.lock
+
 # Yarn & node.js dependencies
 node_modules/
 .pnp.*
@@ -7,21 +14,3 @@ node_modules/
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-yarn.lock
-
-# OS X
-.DS_Store
-._*
-.Spotlight-V100
-.Trashes
-.~lock.*
-
-# Logs files
-npm-debug.log
-yarn-error.log
-
-# Jest coverage
-coverage/
-
-# Test files
-test/output.css

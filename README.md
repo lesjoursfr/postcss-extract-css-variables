@@ -1,33 +1,36 @@
 [![npm version](https://badge.fury.io/js/@lesjoursfr%2Fpostcss-extract-css-variables.svg)](https://badge.fury.io/js/@lesjoursfr%2Fpostcss-extract-css-variables)
+[![QC Checks](https://github.com/lesjoursfr/postcss-extract-css-variables/actions/workflows/quality-control.yml/badge.svg)](https://github.com/lesjoursfr/postcss-extract-css-variables/actions/workflows/quality-control.yml)
 
-postcss-extract-css-variables
-================
+# postcss-extract-css-variables
+
 [PostCSS] plugin to extract rules with CSS variables.
 
-[PostCSS]: https://github.com/postcss/postcss
+[postcss]: https://github.com/postcss/postcss
 
 ```css
 /* Input example */
 .lj-color-35 {
-  --lj-color-main: #fda92a;
-  --lj-color-alpha: rgba(253,169,42,.75);
-  --lj-color-light: #fdde2a;
-  --lj-color-mixed: #fdc42a
+	--lj-color-main: #fda92a;
+	--lj-color-alpha: rgba(253, 169, 42, 0.75);
+	--lj-color-light: #fdde2a;
+	--lj-color-mixed: #fdc42a;
 }
 
 .selector-1 {
-    background-color: var(--lj-color-main);
-    content: "";
-    display: inline-block;
-    height: 5px;
-    margin-right: 10px;
-    width: 18px
+	background-color: var(--lj-color-main);
+	content: "";
+	display: inline-block;
+	height: 5px;
+	margin-right: 10px;
+	width: 18px;
 }
 ```
 
 ```css
 /* Output example */
-.lj-color-35 .selector-1 { background-color: #fda92a; }
+.lj-color-35 .selector-1 {
+	background-color: #fda92a;
+}
 ```
 
 ## Usage

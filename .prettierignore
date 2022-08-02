@@ -1,0 +1,9 @@
+# Tests files
+test/
+coverage/
+
+# Yarn & node.js dependencies
+package.json
+node_modules/
+.pnp.*
+.yarn/*
