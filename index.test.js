@@ -9,7 +9,7 @@ function run(input, opts = {}) {
 
 it("throw an error if there is no output option", () => {
   const input = fs.readFileSync("./test/input.css", { encoding: "utf8" });
-  expect(() => run(input)).toThrowError(new Error("Missing output parameter"));
+  expect(() => run(input)).toThrow(new Error("Missing output parameter"));
 });
 
 it("leave the original CSS unchanged", async () => {
