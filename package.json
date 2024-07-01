@@ -32,11 +32,11 @@
     "postcss": "^8.4.38"
   },
   "devDependencies": {
-    "@eslint/js": "^9.4.0",
-    "eslint": "^9.4.0",
+    "@eslint/js": "^9.5.0",
+    "eslint": "^9.5.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jest": "^28.6.0",
-    "globals": "^15.4.0",
+    "globals": "^15.6.0",
     "jest": "^29.7.0",
     "postcss": "^8.4.38",
     "prettier": "^3.3.2"
@@ -48,5 +48,5 @@
       }
     }
   },
-  "packageManager": "yarn@4.3.0"
+  "packageManager": "yarn@4.3.1"
 }
