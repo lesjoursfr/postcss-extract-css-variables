@@ -1,6 +1,6 @@
 {
   "name": "@lesjoursfr/postcss-extract-css-variables",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "PostCSS plugin to extract rules with CSS variables",
   "license": "MIT",
   "repository": "lesjoursfr/postcss-extract-css-variables",
