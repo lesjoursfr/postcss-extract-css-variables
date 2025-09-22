@@ -26,7 +26,9 @@ jobs:
           package-manager-cache: false
 
       - name: Install
-        run: npm install
+        run: |
+          yarn config set enableImmutableInstalls false
+          yarn install
 
       - name: ESLint checks
         run: npm run check-lint
@@ -53,7 +55,9 @@ jobs:
           package-manager-cache: false
 
       - name: Install
-        run: npm install
+        run: |
+          yarn config set enableImmutableInstalls false
+          yarn install
 
       - name: Jest Tests
         run: npx jest --coverage

@@ -41,6 +41,11 @@
     "postcss": "^8.5.6",
     "prettier": "^3.6.2"
   },
+  "dependenciesMeta": {
+    "unrs-resolver": {
+      "built": true
+    }
+  },
   "jest": {
     "coverageThreshold": {
       "global": {
@@ -48,5 +53,5 @@
       }
     }
   },
-  "packageManager": "yarn@4.9.4"
+  "packageManager": "yarn@4.10.2"
 }
