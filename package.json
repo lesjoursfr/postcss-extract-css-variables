@@ -29,7 +29,7 @@
     "node": "22.x || 24.x"
   },
   "peerDependencies": {
-    "postcss": "^8.5.6"
+    "postcss": "^8.5.8"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
@@ -38,7 +38,7 @@
     "eslint-plugin-jest": "29.15.0",
     "globals": "17.4.0",
     "jest": "30.2.0",
-    "postcss": "8.5.6",
+    "postcss": "8.5.8",
     "prettier": "3.8.1"
   },
   "dependenciesMeta": {
