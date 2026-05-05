@@ -38,6 +38,9 @@ export default [
   {
     ignores: [
       "package.json",
+      "eslint.config.mjs",
+      "prettier.config.mjs",
+      "jest.config.js",
       "node_modules/*",
       ".yarn/*",
       "test/*",

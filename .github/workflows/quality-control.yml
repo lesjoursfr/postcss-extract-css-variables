@@ -60,4 +60,4 @@ jobs:
           yarn install
 
       - name: Jest Tests
-        run: npx jest --coverage
+        run: npm run test
