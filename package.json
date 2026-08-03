@@ -37,9 +37,9 @@
 		"eslint": "10.8.0",
 		"eslint-config-prettier": "10.1.8",
 		"eslint-plugin-jest": "29.16.0",
-		"globals": "17.7.0",
+		"globals": "17.8.0",
 		"jest": "30.4.2",
-		"postcss": "8.5.18",
+		"postcss": "8.5.23",
 		"prettier": "3.9.6"
 	},
 	"dependenciesMeta": {
@@ -48,7 +48,7 @@
 		}
 	},
 	"peerDependencies": {
-		"postcss": "^8.5.18"
+		"postcss": "^8.5.23"
 	},
 	"packageManager": "yarn@4.17.1"
 }
